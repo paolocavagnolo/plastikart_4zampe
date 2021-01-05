@@ -47,8 +47,8 @@ EthernetServer server(502);
 //OUTPUT
 #define MOT1_PWM CONTROLLINO_D0
 #define MOT2_PWM CONTROLLINO_D1
-#define MOT3_PWM CONTROLLINO_D2
-#define MOT4_PWM CONTROLLINO_D3
+#define MOT3_PWM CONTROLLINO_D15
+#define MOT4_PWM CONTROLLINO_D16
 
 #define MOT1_FWD CONTROLLINO_D4
 #define MOT1_BWD CONTROLLINO_D5
@@ -305,7 +305,7 @@ void loop() {
     else if (state == 2) { //SW0_MAN
         
         
-        manVel = 255;
+        manVel = 180;
 
         if (digitalRead(SW2_BWD)) {
           loop_1 = false;
